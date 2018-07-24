@@ -1,0 +1,18 @@
+body {
+    background: #FFFFC2;
+}
+h1 {
+    color: #3c3c3c;
+}
+h2 {
+    color: #ffffff;
+    text-align: left;
+	background-color: #3c3c3c;
+}
+
+p {
+    color: #3c3c3c;
+}
+article{
+	margin-left: 5%;
+}
