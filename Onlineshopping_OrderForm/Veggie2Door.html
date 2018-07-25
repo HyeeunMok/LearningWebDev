@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Veggie2Door_Ordering Form</title/>
+</head>
+<body>
+
+<h1 style="text-align:center;">Veggie2Door</h1>
+
+<p>Are you ready to check out? Few more steps!!</p>
+
+<h3>Check your wish list and put information for order and delivery!</h3>
+
+<form onsubmit="return false;">
+  
+	First name:<br>
+	<input type="text" name="fname" placeholder="First name" autofocus required autocomplete="on">
+	<br><br>
+	Last name:<br>
+	<input type="text" name="lname" placeholder="Last name" required autocomplete="on">
+	<br><br>
+	Number of items<br>
+	Brown Rice (between 0 and 5) 
+	<input type="number" name="quantity" min="0" max="5"><br><br>
+	Avocado (between 0 and 10)
+	<input type="number" name="quantity" min="0" max="10"><br><br>
+	Mushroom (box) (between 0 and 3)
+	<input type="number" name="quantity" min="0" max="3"><br><br>
+	Carrot (between 0 and 10)
+	<input type="number" name="quantity" min="0" max="10"><br><br>
+
+    <p>Choose payment method:</p>
+    <input type="radio" name="payment" value="credit card" checked> Credit Card<br>
+    <input type="radio" name="payment" value="debit card"> Debit Card<br>
+    <input type="radio" name="payment" value="e-transfer"> e-Transfer<br>
+    <br>
+  
+	Delivery Date:
+	<input type="date" name="dday" min="2018-04-20" max="2020-12-31"><br>
+	Special requests for delivery:
+	<textarea></textarea><br>
+	If you are ready to order, click the Submit button.
+	<input type="submit" value="Submit" onclick="alert('Your order was successful!')"><br><br>
+	
+	<input type="button" value="Subscribe to our email" onclick="document.getElementById('note').innerHTML=document.forms[0][0].value">
+	<br>
+	<p id="note"><strong>Note:</strong>Not yet subscribed to our email.</p>
+</form>
+
+</body>
+</html>
