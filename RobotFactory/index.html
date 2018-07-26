@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet href=styles/main.css>
+        <title>Assignment3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="app.js">
+        </script>
+    </head>
+    
+    <body>
+        <div class="grid">
+            <div class="title"><h1><strong>ROBOT FACTORY!</strong></h1></div>
+            <div class="header"><h2>Customize your robot!<br><br></h2>
+                <h4>Click head, body, and leg parts to build your own robot!</h4>
+            </div>
+
+            <div class="robotHead1">
+                <img id="head" style="width:443px; height:120px"
+                     src="images/head3.png" alt="head" onclick="changeHead();">
+            </div>
+
+            <div class="robotBody1">
+                 <img id="body" style="width:443px; height:105px"
+                     src="images/body2.png" alt="body" onclick="changeBody();">
+            </div>
+
+            <div class="robotLeg1">
+                <img id="leg" style="width:443px; height:105px"
+                     src="images/leg4.png" alt="leg" onclick="changeLeg();">
+                <button id="getInfor" style = "background-color: #4876ff; 
+                        text-align: center; font-size: 30px" 
+                        onclick="getInfor()">Done</button>
+                <h4>If you are happy with your choice, click the "done" button!</h4>
+            </div>
+
+        </div>
+    </body>
+</html>
