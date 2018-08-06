@@ -40,8 +40,9 @@
             while($row = $stmt->fetch())
             {
                 echo "<table>";
-                        echo "<td style='width:60%'><a href='#'>" . $row["name"] ."</a></td>";
-                        echo "<td><img src='img/". $row["fileName"]."'/". "width='90' height='90'></td>";
+                    echo "<tr>";
+                    echo "<td style='width:60%'><a href='#'>" . $row["name"] ."</a></td>";
+                    echo "<td><img src='img/". $row["fileName"]."'/". "width='90' height='90'></td>";
                     echo "</tr>";
                 echo "</table>";
             }
