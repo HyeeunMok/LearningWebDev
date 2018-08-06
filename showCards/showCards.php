@@ -22,6 +22,7 @@
                 border: 1px solid tomato;
                 border-spacing: 0;
                 border-collapse: collapse;
+                padding: 5px;
             }
         </style>
     </head>
