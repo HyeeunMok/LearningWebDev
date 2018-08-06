@@ -4,10 +4,31 @@
         <title>Greeting Cards</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">
+        <style>
+            section {
+                padding: 5px 0;
+                margin-left: 50px;
+            }
+            h1 {
+                color: white;
+                background-color: tomato;
+                margin-right: 800px;
+                text-align: center;
+                padding: 10px;
+            }
+            table, td {
+                text-align: center;
+                width: 33%;
+                border: 1px solid tomato;
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+        </style>
     </head>
     <body>
-        <div id="container">
-            <h1 style="color: green">Here are available cards</h1>
+        <section>
+        <div>
+            <h1>Here are available cards</h1>
             <?php
                 include "connect.php";
                 $command = "SELECT A.fileName, B.name FROM image A, holiday B where A.holidayId = B.id";
@@ -17,9 +38,9 @@
 
             while($row = $stmt->fetch())
             {
-                echo "<table style='width:30%' border=1px>";
+                echo "<table>";
                         echo "<td style='width:60%'><a href='#'>" . $row["name"] ."</a></td>";
-                        echo "<td style='text-align: center;'><img src='img/". $row["fileName"]."'/". "width='90' height='90'></td>";
+                        echo "<td><img src='img/". $row["fileName"]."'/". "width='90' height='90'></td>";
                     echo "</tr>";
                 echo "</table>";
             }
@@ -33,5 +54,7 @@
                 </p>
             </div>
         </footer>
+            
+        </section>
     </body>
 </html>
