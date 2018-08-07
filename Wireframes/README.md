@@ -1,1 +1,1 @@
-Wireframes practices for developing websites.
+Wireframe practices for developing websites.
