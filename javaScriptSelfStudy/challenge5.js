@@ -17,7 +17,7 @@ HINT: Start with two empty arrays [] as properties and then fill them up in the 
 
 */
 
-var John = {
+var john = {
     fullName: 'John Smith',
     bills: [124, 48, 268, 180, 42],
     calcTips: function() {
@@ -46,8 +46,8 @@ var John = {
     }
 }
 
-John.calcTips();
-console.log(John);
+john.calcTips();
+console.log(john);
 
 /*
 
@@ -60,3 +60,57 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% hen the b
 7. Calculate the average tip for each family
 8. Log to the console which family paid the highest tips on average
 */
+
+var mark = {
+    fullName: 'Mark Miller',
+    bills: [77, 475, 110, 45],
+    calcTips: function() {
+        this.tips = [];
+        this.finalValues =[];
+                
+        for (var i = 0; i < this.bills.length; i++) {
+            // Determine percentage based on tipping rules
+
+            var percentage;
+            var bill = this.bills[i];
+            
+            if (bill < 100) {
+                percentage = .2;
+            } else if (bill >= 100 && bill < 300) {
+                percentage = .1;
+            } else {
+                percentage = .25;
+            }
+            
+            // Add results to the correspoding arrays
+            this.tips[i] = bill * percentage;
+            this.finalValues[i] = bill + bill * percentage;
+        }
+    }
+}
+
+function calcAverage(tips) {
+    var sum = 0;
+    for (var i = 0; i < tips.length; i++) {
+        sum = sum + tips[i];
+    }
+    return sum / tips.length;
+}
+
+
+// Do the calculations
+john.calcTips();
+mark.calcTips();
+
+john.average = calcAverage(john.tips);
+mark.average = calcAverage(mark.tips);
+console.log(john, mark);
+
+if (john.average > mark.average) {
+    console.log(john.fullName + '\'s family pays higher tips, with an average of $' + john.average);
+} else if (mark.average > john.average) {
+    console.log(mark.fullName + '\'s family pays higher tips, with an average of $' + mark.average);
+} else {
+    console.log('Families pay the same tips, with an average of $' + mark.average);
+}
+
